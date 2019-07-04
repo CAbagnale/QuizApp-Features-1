@@ -38,6 +38,19 @@ function renderQuestion () {
 function submitAnswer () {
     // on form submit check selected answer against correct answer from STORE and
     // run answerFeedbackCorrect/Incorrect
+    $('form').on('submit', function (event) {
+      event.preventDefault();
+      let answer = selected.val();
+      let correctAnswer = `${STORE[questionNumber].questionAnswer}`;
+      if (answer == correctAnswer) {
+        answerFeedbackCorrect();
+      }
+      else {
+        answerFeedbackIncorrect();
+      }
+    }
+    
+    )
 }
 
 function answerFeedbackCorrect () {
