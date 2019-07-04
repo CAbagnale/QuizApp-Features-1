@@ -40,9 +40,9 @@ function submitAnswer () {
     // run answerFeedbackCorrect/Incorrect
     $('form').on('submit', function (event) {
       event.preventDefault();
-      let answer = selected.val();
+      let userAnswer = selected.val();
       let correctAnswer = `${STORE[questionNumber].questionAnswer}`;
-      if (answer == correctAnswer) {
+      if (userAnswer == correctAnswer) {
         answerFeedbackCorrect();
       }
       else {
