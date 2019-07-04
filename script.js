@@ -1,3 +1,6 @@
+let questionNumber = 0;
+let score = 0;
+
 function createQuestion () {
     return `<div class="question-${questionNumber}">
         <h2>Question #1</h2>
@@ -30,6 +33,23 @@ function createQuestion () {
 
 function renderQuestion () {
     $('.questionForm').html(createQuestion());
+}
+
+function submitAnswer () {
+    // on form submit check selected answer against correct answer from STORE and
+    // run answerFeedbackCorrect/Incorrect
+}
+
+function answerFeedbackCorrect () {
+    // Let user know the answer is correct and display extra info
+}
+
+function answerFeedbackIncorrect () {
+    // Let user know the answer is incorrect and display extra info
+}
+
+function updateScore () {
+
 }
 
 
